@@ -3,6 +3,9 @@ import url from 'url';
 import { app } from 'electron';
 import is from 'electron-is';
 import menubar from 'menubar';
+import * as Sentry from "@sentry/electron";
+
+Sentry.init({ dsn: "https://51981a9f845b4f7fa7b1d8f67b75b834@o36588.ingest.sentry.io/5626429" });
 
 let mb;
 
@@ -13,10 +16,10 @@ app.on('ready', () => {
       protocol: 'file:',
       slashes: true,
     }),
-    icon: path.resolve(__dirname, 'IconTemplate.png'),
-    tooltip: 'MyApp',
+    icon: path.resolve(__dirname, 'eye.png'),
+    tooltip: 'JsonEye',
     width: 350,
-    height: 460,
+    height: 800,
     fullscreenable: false,
     resizable: false,
     transparent: true,

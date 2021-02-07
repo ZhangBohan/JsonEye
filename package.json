@@ -1,8 +1,8 @@
 {
-  "name": "electron-menubar",
-  "productName": "MyApp",
-  "version": "1.0.0",
-  "description": "Boilerplate for electron menubar app",
+  "name": "electron-json-eye",
+  "productName": "JsonEye",
+  "version": "1.0.1",
+  "description": "Quick view json from clipboard",
   "main": "./app/main.js",
   "scripts": {
     "build": "concurrently \"yarn build:main\" \"yarn build:renderer\"",
@@ -11,7 +11,7 @@
     "start": "concurrently \"yarn start:renderer\" \"yarn start:main\"",
     "start:main": "nodemon --exec \"yarn build:main && electron .\"",
     "start:renderer": "webpack-dev-server --color --config ./config/webpack.config.renderer.dev.js",
-    "postinstall": "electron-builder install-app-deps package.json"
+    "postinstall": "electron-builder install-app-deps"
   },
   "repository": {
     "type": "git",
@@ -41,11 +41,16 @@
   },
   "homepage": "https://github.com/rousan/electron-menubar#readme",
   "dependencies": {
+    "@sentry/electron": "^2.2.0",
+    "@sentry/react": "^6.1.0",
+    "@sentry/tracing": "^6.1.0",
     "electron-is": "^3.0.0",
+    "electron-squirrel-startup": "^1.0.0",
     "menubar": "^5.2.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react-dom": "^16.8.2",
+    "react-json-view": "^1.21.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -58,7 +63,6 @@
     "concurrently": "^4.1.0",
     "css-loader": "^2.1.0",
     "electron": "^4.0.5",
-    "electron-builder": "^20.38.5",
     "eslint": "^5.14.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
@@ -75,7 +79,7 @@
     "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.0",
+    "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^4.2.1"
   }
 }

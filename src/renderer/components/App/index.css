@@ -24,6 +24,7 @@
 .app .content .tab-pages {
   flex: 1 1 auto;
   position: relative;
+  overflow-x: hidden;
 }
 
 .app .content .tab-pages .tab1-panel-container {
