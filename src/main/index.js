@@ -31,9 +31,9 @@ app.on('ready', () => {
     // preloadWindow: true,
   });
 
-  mb.on('after-create-window', () => {
-    mb.window.webContents.openDevTools({ mode: 'undocked' });
-  });
+  // mb.on('after-create-window', () => {
+  //   mb.window.webContents.openDevTools({ mode: 'undocked' });
+  // });
 });
 
 app.on('window-all-closed', (event) => {

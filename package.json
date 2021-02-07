@@ -1,7 +1,7 @@
 {
   "name": "electron-json-eye",
   "productName": "JsonEye",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Quick view json from clipboard",
   "main": "./app/main.js",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rousan/electron-menubar.git"
+    "url": "git+https://github.com/ZhangBohan/JsonEye.git"
   },
   "keywords": [
     "electron",
@@ -30,16 +30,16 @@
   },
   "contributors": [
     {
-      "name": "Rousan Ali",
-      "email": "rousanali786@gmail.com",
-      "url": "https://rousan.io"
+      "name": "bohan",
+      "email": "bohanzhang@foxmail.com",
+      "url": "https://github.com/ZhangBohan"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rousan/electron-menubar/issues"
+    "url": "https://github.com/ZhangBohan/JsonEye/issues"
   },
-  "homepage": "https://github.com/rousan/electron-menubar#readme",
+  "homepage": "https://github.com/ZhangBohan/JsonEye#readme",
   "dependencies": {
     "@sentry/electron": "^2.2.0",
     "@sentry/react": "^6.1.0",
