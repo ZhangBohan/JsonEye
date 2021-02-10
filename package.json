@@ -1,7 +1,7 @@
 {
   "name": "electron-json-eye",
   "productName": "JsonEye",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Quick view json from clipboard",
   "main": "./app/main.js",
   "scripts": {
@@ -50,7 +50,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-json-view": "^1.21.1"
+    "react-json-view": "^1.21.1",
+    "react-syntax-highlighter": "^15.4.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

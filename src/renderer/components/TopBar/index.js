@@ -11,7 +11,7 @@ const TopBar = ({ onChangeTab }) => {
 
   return (
     <div className="top-bar" style={style}>
-      <DualButton leftButton="tab1" rightButton="tab2" onClick={onChangeTab} />
+      <DualButton leftButton="tree" rightButton="pretty" onClick={onChangeTab} />
     </div>
   );
 };

@@ -8,18 +8,20 @@ import PopOver from '../PopOver';
 import TopBar from '../TopBar';
 import Footer from '../Footer';
 import ReactJson from 'react-json-view';
+import SyntaxHighlighter from 'react-syntax-highlighter';
 
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'tab1',
+      selectedTab: 'tree',
       myJson: {},
-      clipboardText: ''
+      clipboardText: undefined
     };
 
     this.onChangeTab = this.onChangeTab.bind(this);
+    this.clickCopyToClipboard = this.clickCopyToClipboard.bind(this);
   }
 
   tick() {
@@ -54,6 +56,11 @@ class App extends Component {
     });
   }
 
+  clickCopyToClipboard() {
+    console.log('do copy')
+    clipboard.writeText(JSON.stringify(this.state.myJson, null, 2))
+  }
+
   render() {
     const contentStyle = {
       borderTopLeftRadius: is.macOS() ? constants.macWinBorderRadius : 0,
@@ -68,15 +75,18 @@ class App extends Component {
           {/* <PopOver position="top" height={12} /> */}
         </div>
         <div className="content" style={contentStyle}>
-          {/* <div className="top-bar-container">
+          <div className="top-bar-container">
             <TopBar onChangeTab={this.onChangeTab} />
-          </div> */}
+          </div>
           <div className="tab-pages">
-            <div className="tab1-panel-container" style={displayStyle(this.state.selectedTab === 'tab1')}>
-            <ReactJson src={this.state.myJson} indentWidth={2} enableClipboard={false} />
+            <div className="tab1-panel-container" style={displayStyle(this.state.selectedTab === 'tree')}>
+              <ReactJson src={this.state.myJson} indentWidth={2} enableClipboard={false} />
             </div>
-            <div className="tab2-panel-container" style={displayStyle(this.state.selectedTab === 'tab2')}>
-              tab2
+            <div className="tab2-panel-container" style={displayStyle(this.state.selectedTab === 'pretty')}>
+              <button onClick={this.clickCopyToClipboard}>copy</button>
+              <SyntaxHighlighter language="javascript">
+                {JSON.stringify(this.state.myJson, null, 2)}
+              </SyntaxHighlighter>
             </div>
           </div>
         </div>

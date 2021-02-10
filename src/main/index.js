@@ -1,14 +1,20 @@
 import path from 'path';
 import url from 'url';
-import { app } from 'electron';
+import { app, globalShortcut } from 'electron';
 import is from 'electron-is';
 import menubar from 'menubar';
 import * as Sentry from "@sentry/electron";
-const {Tray} = require('electron')
 
 Sentry.init({ dsn: "https://51981a9f845b4f7fa7b1d8f67b75b834@o36588.ingest.sentry.io/5626429" });
 
 let mb;
+
+app.whenReady().then(() => {
+  globalShortcut.register('Alt+CommandOrControl+I', () => {
+    console.log('Electron loves global shortcuts!')
+    mb.window.webContents.openDevTools({ mode: 'undocked' });
+  })
+})
 
 app.on('ready', () => {
 
@@ -33,9 +39,13 @@ app.on('ready', () => {
     // preloadWindow: true,
   });
 
-  // mb.on('after-create-window', () => {
-  //   mb.window.webContents.openDevTools({ mode: 'undocked' });
-  // });
+  mb.on('after-create-window', () => {
+    // mb.window.webContents.openDevTools({ mode: 'undocked' });
+  });
+  mb.on('focus-lost', () => {
+    console.log('focus-lost');
+    mb.hideWindow();
+  })
 });
 
 app.on('window-all-closed', (event) => {
