@@ -73,7 +73,7 @@ class App extends Component {
           </div> */}
           <div className="tab-pages">
             <div className="tab1-panel-container" style={displayStyle(this.state.selectedTab === 'tab1')}>
-            <ReactJson src={this.state.myJson} />
+            <ReactJson src={this.state.myJson} indentWidth={2} enableClipboard={false} />
             </div>
             <div className="tab2-panel-container" style={displayStyle(this.state.selectedTab === 'tab2')}>
               tab2
