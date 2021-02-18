@@ -1,25 +1,10 @@
 <p align="center">
-  <img width="500" src="https://raw.githubusercontent.com/ZhangBohan/JsonEye/main/screenshot-mac.jpg" alt="electron-menubar-app-mac">
+  <img width="500" src="https://raw.githubusercontent.com/ZhangBohan/JsonEye/main/screenshot-mac-01.jpg" alt="JsonEye tree view">
+  <img width="500" src="https://raw.githubusercontent.com/ZhangBohan/JsonEye/main/screenshot-mac-02.jpg" alt="JsonEye pretty view">
     <br>
     <br>
 </p>
 
 # Json Eye
 
-A boilerplate for electron menubar application with integration with `React` and `Webpack`. I am using [`menubar`](https://github.com/maxogden/menubar) as a dependency to get cross-platform compatibility. It supports `MacOS`, `Windows`, and `Linux`.
-
-> Boilerplate for electron menubar app with popover.
-
-# How to use?
-
-Just clone or fork it, then delete unnecessary files and add your app components.
-
-Run to start app:
-
-```shell
-yarn start
-```
-
-## Contributing
-
-Your PRs and stars are always welcome.
+在菜单栏中查看最近复制过的JSON并进行格式化。
