@@ -1,6 +1,6 @@
 <p align="center">
-  <img width="500" src="https://raw.githubusercontent.com/ZhangBohan/JsonEye/main/screenshot-mac-01.jpg" alt="JsonEye tree view">
-  <img width="500" src="https://raw.githubusercontent.com/ZhangBohan/JsonEye/main/screenshot-mac-02.jpg" alt="JsonEye pretty view">
+  <img width="500" src="https://raw.githubusercontent.com/ZhangBohan/JsonEye/main/screenshot-mac-01.png" alt="JsonEye tree view">
+  <img width="500" src="https://raw.githubusercontent.com/ZhangBohan/JsonEye/main/screenshot-mac-02.png" alt="JsonEye pretty view">
     <br>
     <br>
 </p>
